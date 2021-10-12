@@ -1,0 +1,70 @@
+import java.io.*;
+public class change
+{
+public static void main(String args[])throws IOException
+{
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	String str=br.readLine();
+	String str2="";
+	System.out.println("Uppercase");
+		str2=str.toUpperCase();
+		System.out.println(str2);
+		String str3="";
+	System.out.println("Lowercase");
+		str3=str.toLowerCase();
+		System.out.println(str3);
+		String str4="";
+		for(int i=0;i<str.length();i++)
+		{
+		    char chr;
+		    char chr1;
+		    chr=str.charAt(i);
+		    if(chr==' ')
+		    {
+		        chr1=str.charAt(i+1);
+		        str4=str4+' '+Character.toUpperCase(chr1);
+		        i=i+1;
+		    }
+		    else
+		    str4=str4+chr;
+		}
+System.out.println("Capitalize");
+System.out.println(str4);
+String str5="";
+for(int i=0;i<str.length();i++)
+		{
+		    char chr;
+		    char chr2;
+		    chr=str.charAt(i);
+		    if(chr=='.')
+		    {
+		        chr2=str.charAt(i+1);
+		        str5=str5+'.'+Character.toUpperCase(chr2);
+		        i=i+1;
+		    }
+		    else
+		    str5=str5+chr;
+		}
+System.out.println("Sentence Case");
+System.out.println(str5);
+String str6="";
+char chr4;
+for(int i=0;i<str.length();i++)
+{
+    chr4=str.charAt(i);
+    if(chr4>='a' && chr4<='z')
+    {
+        str6=str6+Character.toUpperCase(chr4);
+    }
+    else if(chr4>='A' && chr4<='Z')
+    {
+        str6=str6+Character.toLowerCase(chr4);
+    }
+    else
+    str6=str6+chr4;
+}
+System.out.println("Invert");
+System.out.println(str6);
+}
+
+}
